@@ -1,24 +1,308 @@
-body {
-  font-family: Arial;
-  margin: 40px;
-  background: #f4f4f4;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: #0f071a;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 20px;
+
+  background: rgba(20, 10, 35, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+nav a{
+  color: #e9d5ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover{
+  color: #c084fc;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+.perfil{
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid #a855f7;
+
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+
+  margin-bottom: 25px;
+}
+
+.hero h1{
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.hero p{
+  color: #d8b4fe;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* ===== BOTON ===== */
+
+.btn{
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #c084fc
+  );
+
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}
+
+/* ===== SECCIONES ===== */
+
+section{
+  padding: 100px 20px;
+}
+
+.container{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 40px;
+  color: #d8b4fe;
+  margin-bottom: 50px;
+}
+
+.texto{
+  text-align: center;
+  color: #ddd6fe;
+  font-size: 18px;
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill{
+  background: #221133;
+
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.skill:hover{
+  transform: translateY(-5px);
+
+  background: #3b1d5e;
+}
+
+/* ===== PROYECTOS ===== */
+
+.proyectos{
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
+
+  gap: 25px;
+}
+
+.card{
+  background: #1a1029;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+}
+
+.card h3{
+  color: #d8b4fe;
+  margin-bottom: 15px;
+}
+
+.card p{
+  color: #ddd6fe;
+  margin-bottom: 20px;
+}
+
+/* ===== CONTACTO ===== */
+
+.contacto{
   text-align: center;
 }
 
-section {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
+.contacto p{
+  margin-bottom: 15px;
+  color: #ddd6fe;
 }
-.perfil {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+
+/* ===== FOOTER ===== */
+
+footer{
+  text-align: center;
+  padding: 30px;
+
+  background: #12091d;
+
+  color: #c4b5fd;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+  display: none;
+
+  position: fixed;
+
+  z-index: 2000;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.8);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido{
+  background: #1b1028;
+
+  width: 90%;
+  max-width: 700px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  position: relative;
+
+  text-align: center;
+}
+
+.modal-contenido h2{
+  color: #d8b4fe;
+  margin-bottom: 20px;
+}
+
+.modal-contenido p{
+  color: #ddd6fe;
+}
+
+.cerrar{
+  position: absolute;
+
+  top: 10px;
+  right: 20px;
+
+  font-size: 35px;
+
+  cursor: pointer;
+}
+
+.modal-img{
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.modal-video{
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+  nav{
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hero h1{
+    font-size: 38px;
+  }
+
+  .titulo{
+    font-size: 32px;
+  }
+
 }
