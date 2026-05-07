@@ -1,36 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
-  <title>Adrián García - Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portafolio | Adrián García</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-  <img src="20260112_223935(0)(1).jpg" class="perfil" width="150">
-  <header>
+  <!-- ===== NAVBAR ===== -->
+
+  <nav>
+
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+
+  </nav>
+
+  <!-- ===== HERO ===== -->
+
+  <section class="hero" id="inicio">
+
+    <!-- CAMBIA foto.jpg POR TU FOTO -->
+
+    <img src="foto.jpg" class="perfil">
+
     <h1>Adrián García</h1>
-    <p>Estudiante | Atención al cliente | Aprendo rápido</p>
-  </header>
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy estudiante con habilidades en atención al cliente...</p>
+    <p>
+      Estudiante • Atención al cliente • Aprendizaje rápido
+    </p>
+
+    <a href="#contacto" class="btn">
+      Contáctame
+    </a>
+
   </section>
 
-  <section>
-    <h2>Habilidades</h2>
-    <ul>
-      <li>Comunicación</li>
-      <li>Trabajo en equipo</li>
-      <li>Aprendizaje rápido</li>
-    </ul>
+  <!-- ===== SOBRE MI ===== -->
+
+  <section id="sobre">
+
+    <div class="container">
+
+      <h2 class="titulo">
+        Sobre mí
+      </h2>
+
+      <p class="texto">
+
+        Soy estudiante con interés en tecnología, diseño y desarrollo web.
+        Me gusta aprender nuevas habilidades y crear proyectos digitales modernos.
+
+      </p>
+
+    </div>
+
   </section>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>Email: tuemail@email.com</p>
+  <!-- ===== HABILIDADES ===== -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <h2 class="titulo">
+        Habilidades
+      </h2>
+
+      <div class="skills">
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Comunicación</div>
+        <div class="skill">Trabajo en equipo</div>
+        <div class="skill">Aprendizaje rápido</div>
+
+      </div>
+
+    </div>
+
   </section>
+
+  <!-- ===== PROYECTOS ===== -->
+
+  <section id="proyectos">
+
+    <div class="container">
+
+      <h2 class="titulo">
+        Proyectos
+      </h2>
+
+      <div class="proyectos">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+          <h3>App de Hábitos</h3>
+
+          <p>
+            Aplicación para seguimiento de hábitos diarios.
+          </p>
+
+          <button class="btn" onclick="abrirModal()">
+            Ver más
+          </button>
+
+        </div>
+        <div class="card">
+
+          <h3>App de Hábitos</h3>
+
+          <p>
+            Aplicación para seguimiento de hábitos diarios.
+          </p>
+
+          <button class="btn" onclick="abrirModal()">
+            Ver más
+          </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+
+  <section id="contacto">
+
+    <div class="container contacto">
+
+      <h2 class="titulo">
+        Contacto
+      </h2>
+
+      <p>Email: tucorreo@email.com</p>
+
+      <p>GitHub: github.com/tuusuario</p>
+
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer>
+
+    © 2026 Adrián García — Portafolio Personal
+
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+
+  <div id="modal" class="modal">
+
+    <div class="modal-contenido">
+
+      <span class="cerrar" onclick="cerrarModal()">
+
+        &times;
+
+      </span>
+
+      <h2>
+        App de Hábitos
+      </h2>
+
+      <p>
+        Proyecto enfocado en seguimiento de hábitos diarios y rachas.
+      </p>
+
+      <!-- CAMBIA imagen-proyecto.jpg -->
+
+      <img src="imagen-proyecto.jpg" class="modal-img">
+
+      <!-- VIDEO OPCIONAL -->
+
+      <!--
+      <video controls class="modal-video">
+
+        <source src="video.mp4" type="video/mp4">
+
+      </video>
+      -->
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
